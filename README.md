@@ -1,0 +1,2 @@
+# BuildABridgeSimulator
+ Create a bridge simulation in the form of a bridge building puzzle game. Using the Unity Engine, we will build a simple level where the user must build a bridge that will allow a car to cross a river. There will be a build phase, where the user must build a bridge suitable for the car to cross on, and a test phase, where the car and bridge physics are simulated and the car will try to cross the bridge. If it is successful, the bridge will hold and the car will pass. If it is not, the bridge will collapse and the car will crash.
