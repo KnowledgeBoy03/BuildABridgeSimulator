@@ -30,21 +30,26 @@ public class GameMenu : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!paused)
+            pause();
+        }
+    }
+
+    public void pause()
+    {
+        if (!paused)
+        {
+            if (building)
             {
-                if (building)
-                {
-                    BuildMenu.SetActive(!building);
-                }
-                paused = true;
-                PauseMenu.SetActive(paused);
+                BuildMenu.SetActive(!building);
             }
-            else if (paused)
-            {
-                BuildMenu.SetActive(building);
-                paused = false;
-                PauseMenu.SetActive(paused);
-            }
+            paused = true;
+            PauseMenu.SetActive(paused);
+        }
+        else if (paused)
+        {
+            BuildMenu.SetActive(building);
+            paused = false;
+            PauseMenu.SetActive(paused);
         }
     }
 
