@@ -1,9 +1,9 @@
-[Ll]ibrary/
-[Ll]ogs/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
+/[Ll]ibrary/
+/[Ll]ogs/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
 Assets/AssetStoreTools*
 
 # JetBrains Rider cache and files
