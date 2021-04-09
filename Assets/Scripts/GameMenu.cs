@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,12 @@ public class GameMenu : MonoBehaviour
 {
     public GameObject PauseMenu;
     public GameObject BuildMenu;
+    public GameObject Success;
+    public GameObject Failure;
+    public CarTest cS;
     public bool paused = false;
     public bool building = false;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -32,6 +37,16 @@ public class GameMenu : MonoBehaviour
         {
             pause();
         }
+
+        if (cS.successCheck)
+        {
+            Success.SetActive(true);
+        }
+
+        if (cS.failureCheck)
+        {
+            Failure.SetActive(true);
+        }
     }
 
     public void pause()
@@ -53,4 +68,15 @@ public class GameMenu : MonoBehaviour
         }
     }
 
+    public void test()
+    {
+        cS.testPhase = true;
+    }
+
+    public void reset()
+    {
+        Success.SetActive(false);
+        Failure.SetActive(false);
+        cS.positionReset();
+    }
 }
