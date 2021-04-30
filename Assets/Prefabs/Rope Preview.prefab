@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7920155019857725765
+--- !u!1 &6977386638191794404
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3709515170484587251}
-  - component: {fileID: 8405848798738829954}
-  - component: {fileID: 2424233549337129668}
-  - component: {fileID: 6965614168884176763}
-  - component: {fileID: 7474146487065254464}
-  - component: {fileID: 7960032986148989529}
+  - component: {fileID: 5075917802246057212}
+  - component: {fileID: 4766349849844118775}
+  - component: {fileID: 2832282891066675345}
+  - component: {fileID: 6985622130717306100}
+  - component: {fileID: 6082365671477276140}
+  - component: {fileID: 2348502784300580972}
   m_Layer: 9
-  m_Name: Floor Preview
+  m_Name: Rope Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3709515170484587251
+--- !u!4 &5075917802246057212
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920155019857725765}
+  m_GameObject: {fileID: 6977386638191794404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.77, y: -0.25, z: -10}
-  m_LocalScale: {x: 10, y: 0.5, z: 10}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.125, y: 0.125, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8405848798738829954
+--- !u!33 &4766349849844118775
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920155019857725765}
+  m_GameObject: {fileID: 6977386638191794404}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2424233549337129668
+--- !u!23 &2832282891066675345
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920155019857725765}
+  m_GameObject: {fileID: 6977386638191794404}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,26 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6965614168884176763
+--- !u!65 &6985622130717306100
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920155019857725765}
+  m_GameObject: {fileID: 6977386638191794404}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7474146487065254464
+--- !u!54 &6082365671477276140
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920155019857725765}
+  m_GameObject: {fileID: 6977386638191794404}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,21 +114,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7960032986148989529
+--- !u!114 &2348502784300580972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920155019857725765}
+  m_GameObject: {fileID: 6977386638191794404}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6751af6a3df6a1d41a80358f31ce4055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7072992274231453952, guid: 9c89022281ab47b458d1373dc4f74e7d, type: 3}
+  prefab: {fileID: 6977386638191794404, guid: 811c392da98d02a4485f1e3aea3d9d21, type: 3}
   goodMat: {fileID: 2100000, guid: c77f4b85f94f68244b32da259d6d4b2c, type: 2}
   badMat: {fileID: 2100000, guid: 15a60192a000be844aa7443df40ffcac, type: 2}
-  isFoundation: 1
-  tagsISnapTo:
-  - Foundation_SP
+  isFoundation: 0
+  tagsISnapTo: []

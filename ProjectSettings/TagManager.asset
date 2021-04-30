@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Road_SP
   - Beam_SP
+  - Foundation_SP
   layers:
   - Default
   - TransparentFX

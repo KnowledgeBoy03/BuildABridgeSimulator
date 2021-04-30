@@ -17,8 +17,7 @@ public class Preview : MonoBehaviour
     public bool isFoundation = false;
 
     public List<string> tagsISnapTo = new List<string>();
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         buildSystem = GameObject.FindObjectOfType<BuildSystem>();
