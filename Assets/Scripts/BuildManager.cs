@@ -19,7 +19,7 @@ public class BuildManager : MonoBehaviour
         }
     }
     
-    public void BuildWoodBeam()
+    public void BuildWoodenBeam()
     {
         if (!buildSystem.isBuilding)
         {
