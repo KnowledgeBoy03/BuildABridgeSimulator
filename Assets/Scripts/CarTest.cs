@@ -24,7 +24,7 @@ public class CarTest : MonoBehaviour
         {
             successCheck = true;
         }
-        else
+        else if (other.gameObject.name == "FailureCheck")
         {
             failureCheck = true;
         }
