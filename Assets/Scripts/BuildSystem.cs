@@ -73,8 +73,38 @@ public class BuildSystem : MonoBehaviour
         isBuilding = false;
     }
 
+    Boolean checkAmt(int count)
+    {
+        if (count < 0) return true;
+        else return false;
+    }
     private void BuildIt()
     {
+        print(previewGameObject.name);
+        switch (previewGameObject.name)
+        {
+            case "Wooden Beam Preview(Clone)":
+                WoodBeam woodBeam = FindObjectOfType<WoodBeam>();
+                if (checkAmt(woodBeam.count)) return;
+                woodBeam.count -= 1;
+                break;
+            case "Steel Beam Preview(Clone)":
+                SteelBeam steelBeam = FindObjectOfType<SteelBeam>();
+                if (checkAmt(steelBeam.count)) return;
+                steelBeam.count -= 1;
+                break;
+            case "Rope Preview(Clone)":
+                Rope rope = FindObjectOfType<Rope>();
+                if (checkAmt(rope.count)) return;
+                rope.count -= 1;
+                break;
+            case "Road Preview(Clone)":
+                Road road = FindObjectOfType<Road>();
+                if (checkAmt(road.count)) return;
+                road.count -= 1;
+                break;
+
+        }
         previewScript.Place();
         previewGameObject = null;
         previewScript = null;

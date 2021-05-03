@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Rope : MonoBehaviour
 {
-    private int count = 0;
+    public int count = 2;
     public Text txt;
     void Update()
     {

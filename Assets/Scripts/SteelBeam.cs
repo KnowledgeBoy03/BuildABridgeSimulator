@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SteelBeam : MonoBehaviour
 {
-    private int count = 0;
+    public int count = 4;
     public Text txt;
     void Update()
     {
