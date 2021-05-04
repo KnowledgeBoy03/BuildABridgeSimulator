@@ -11,6 +11,10 @@ public class CarTest : MonoBehaviour
     public bool testPhase = false;
     public bool successCheck = false;
     public bool failureCheck = false;
+    public WoodBeam woodBeam;
+    public SteelBeam steelBeam;
+    public Road road;
+    public Rope rope; 
 
     void Start()
     {
@@ -54,5 +58,10 @@ public class CarTest : MonoBehaviour
         {
             Destroy(bridgeObjects[i]);
         }
+        
+        woodBeam.count = 20;
+        steelBeam.count = 4;
+        road.count = 10;
+        rope.count = 15;
     }
 }

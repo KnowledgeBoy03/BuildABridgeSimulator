@@ -18,9 +18,9 @@ public class GameMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (paused)
+            if (paused || cS.testPhase)
             {
-                print("CANNOT BUILD WHILE PAUSED");
+                print("CANNOT BUILD WHILE PAUSED OR TESTING");
             }
             else if (building)
             {
@@ -35,7 +35,20 @@ public class GameMenu : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pause();
+            if (cS.testPhase)
+            {
+                print("CANNOT PAUSE WHILE TESTING");
+            }
+            else
+            {
+                pause();
+            }
+        }
+
+        if (cS.testPhase)
+        {
+            building = false;
+            BuildMenu.SetActive(building);
         }
 
         if (cS.successCheck)

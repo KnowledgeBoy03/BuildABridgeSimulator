@@ -2173,13 +2173,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 27.29, y: 3.38, z: 0}
+  m_LocalRotation: {x: -0.12278779, y: 0.6963643, z: -0.12278779, w: -0.6963643}
+  m_LocalPosition: {x: 40, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 270, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3264,6 +3264,10 @@ MonoBehaviour:
   testPhase: 0
   successCheck: 0
   failureCheck: 0
+  woodBeam: {fileID: 1120487026}
+  steelBeam: {fileID: 628873996}
+  road: {fileID: 1456251851}
+  rope: {fileID: 205908622}
 --- !u!54 &1363325769
 Rigidbody:
   m_ObjectHideFlags: 0
