@@ -22,7 +22,7 @@ public class BuildSystem : MonoBehaviour
             previewGameObject.transform.Rotate(45f, 0, 0);
         }
         
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Tab))
         {
             CancelBuild();
         }
@@ -75,7 +75,7 @@ public class BuildSystem : MonoBehaviour
 
     Boolean checkAmt(int count)
     {
-        if (count < 0) return true;
+        if (count <= 0) return true;
         else return false;
     }
     private void BuildIt()

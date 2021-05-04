@@ -14,12 +14,17 @@ public class CarTest : MonoBehaviour
     public WoodBeam woodBeam;
     public SteelBeam steelBeam;
     public Road road;
-    public Rope rope; 
+    public Rope rope;
+    private int carCap;
+    public int weightLim;
+    public bool bridgeFailed;
 
     void Start()
     {
         OGpos = transform.position;
         rb = GetComponent<Rigidbody>();
+        carCap = 40;
+        bridgeFailed = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,14 +37,24 @@ public class CarTest : MonoBehaviour
         {
             failureCheck = true;
         }
-        testPhase = false;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "Road(Clone)")
+        {
+            if (carCap > weightLim)
+            {
+                bridgeFailed = true;
+            }
+        }
     }
 
     void Update()
     {
         if (testPhase == true)
         {
-            Vector3 movement = new Vector3(0.0f, 0.0f, 1f);
+            Vector3 movement = new Vector3(0.0f, 0.0f, 2f);
             rb.AddForce(movement * speed);
         }
     }
@@ -52,6 +67,7 @@ public class CarTest : MonoBehaviour
         testPhase = false;
         successCheck = false;
         failureCheck = false;
+        bridgeFailed = false;
         
         GameObject[] bridgeObjects = GameObject.FindGameObjectsWithTag("Bridge");
         for (int i = 0; i < bridgeObjects.Length; i++)

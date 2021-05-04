@@ -130,4 +130,5 @@ MonoBehaviour:
   goodMat: {fileID: 2100000, guid: c77f4b85f94f68244b32da259d6d4b2c, type: 2}
   badMat: {fileID: 2100000, guid: 15a60192a000be844aa7443df40ffcac, type: 2}
   isFoundation: 0
-  tagsISnapTo: []
+  tagsISnapTo:
+  - Beam_SP
