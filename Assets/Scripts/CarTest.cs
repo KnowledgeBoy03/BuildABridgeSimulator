@@ -44,8 +44,15 @@ public class CarTest : MonoBehaviour
     {
         transform.position = OGpos;
         rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         testPhase = false;
         successCheck = false;
         failureCheck = false;
+        
+        GameObject[] bridgeObjects = GameObject.FindGameObjectsWithTag("Bridge");
+        for (int i = 0; i < bridgeObjects.Length; i++)
+        {
+            Destroy(bridgeObjects[i]);
+        }
     }
 }
